@@ -1,22 +1,22 @@
-#include "Barometer.h"
+#include "Barometer.h"   // Barometer include
 #include <Wire.h>
-#include "DHT.h"
-#define DHTPIN 3     // what pin we're connected to
-#define DHTTYPE DHT22   // DHT 22  (AM2302)
+#include "DHT.h"        // Temperature and Humidity sensor include
+#define DHTPIN 3        // What pin we're connected to
+#define DHTTYPE DHT22    // DHT 22  (AM2302)
 
-#include <HttpClient.h>
+#include <HttpClient.h>   // Using Wi-Fi to connect
 #include <LAudio.h>
 #include <LTask.h>
 #include <LWiFi.h>
 #include <LWiFiClient.h>
 #include <LDateTime.h>
-#define WIFI_AP "Barry"
-#define WIFI_PASSWORD "0937630846"
+#define WIFI_AP "Wi-Fi AP name"
+#define WIFI_PASSWORD "password or none"
 #define WIFI_AUTH LWIFI_WPA  // choose from LWIFI_OPEN, LWIFI_WPA, or LWIFI_WEP.
 #define per 50
 #define per1 3
-#define DEVICEID "DAFiUiC0" // Input your deviceId
-#define DEVICEKEY "uEIY05NnxM0p2fBk" // Input your deviceKey
+#define DEVICEID "DAFi****" // Input your deviceId
+#define DEVICEKEY "uE**05**xM**2f**" // Input your deviceKey
 #define SITE_URL "api.mediatek.com"
 LWiFiClient content;
 HttpClient http(content);
